@@ -87,6 +87,12 @@
 #########################
 print("task 12")
 minutes_inputted = int(input("how many minutes passed from 12am: "))
-print("watches will show- hours: minutes", minutes_inputted//60, ":", minutes_inputted%60 )
+number_of_days = minutes_inputted // 1440
+if number_of_days < 0:
+    print("watches will show- hours: minutes", minutes_inputted // 60, ":", minutes_inputted % 60)
+else:
+    total_time = minutes_inputted - (1440 * number_of_days)
+    print("watches will show- hours: minutes", total_time // 60, ":", total_time % 60)
+
 #########################
 print("task 13")
